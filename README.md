@@ -10,7 +10,7 @@ Use algorithm 'stochastic gradient descent' and 'alternating least square' to tr
 
 **prepare_data.py**: Run it first to get the reformed dataset and other auxiliary files.
 
-**ALS_extra_data.py** Run it to get the extra needed data for ALS method
+**ALS_extra_data.py**: Run it to get the extra needed data for ALS method
 
 **matrix_stoc_grad_desc.py**: Run it to train and evaluate the matrices by stochastic gradient descent
 
