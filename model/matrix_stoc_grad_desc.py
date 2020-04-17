@@ -69,8 +69,7 @@ class MatrixModel(object):
     def predict_rating(self, movieIdx, userIdx):
         # prediction = movie average rating + user offset + the part of matrix factorization
         return np.sum(self.userFeature[:,userIdx]*self.movieFeature[:,movieIdx]) + self.movie_avg_ratings[movieIdx] + self.user_offsets[userIdx]
-
-
+        
     def train_one_epoch(self, batch_size):
         # use stochastic gradient descent method for training the 2 matrices
         def stochastic_grad_desc(userIdxes, movieIdx, realRatings):
@@ -82,21 +81,22 @@ class MatrixModel(object):
                 movieValue += self.lrate*(error*userValueCopy - self.lmbda*movieValue)
                 self.userFeature[:,userIdx] = np.clip(userValue,-1.0,1.0)
                 self.movieFeature[:,movieIdx] = np.clip(movieValue,-1.0,1.0)
-        
         startId = 0
         for movieIdx, rating_num in enumerate(self.train_rating_counts):
             # At each step, extract and train a random batch of the ratings for the same film
             tr_ratings = self.train_ratings[startId:startId+rating_num,:]
             startId += rating_num
-            np.random.shuffle(tr_ratings)
-            # get the user index from the real user Ids
-            realUserIds, realRatings = tr_ratings[0:batch_size,1], tr_ratings[0:batch_size,2]
+            if batch_size is not None:
+                np.random.shuffle(tr_ratings)
+                # get the user index from the real user Ids
+                realUserIds, realRatings = tr_ratings[0:batch_size,1], tr_ratings[0:batch_size,2]
+            else:
+                realUserIds, realRatings = tr_ratings[:,1], tr_ratings[:,2]
             userIdxes = np.array([self.invUserIdx[Id] for Id in realUserIds])
-
             stochastic_grad_desc(userIdxes, movieIdx, realRatings)
-            if movieIdx%5000 == 0:           
+            if movieIdx%100 == 0:           
                 print("Finish the ratings of movie {}".format(movieIdx))
-
+        
 
     def training(self, max_epoch, batch_size, current_epoch=0):
         for epoch in range(current_epoch, max_epoch):
@@ -161,7 +161,8 @@ class MatrixModel(object):
 
 def main(argv):
     max_epoch = 1200
-    batch_size = 400
+    # batch_size = 400
+    batch_size = None
     matrix_model = MatrixModel()
     flag = argv[1]
     if flag == 'continue':

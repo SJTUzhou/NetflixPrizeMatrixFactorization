@@ -17,6 +17,7 @@ MOVIE_FEATURE_FILE  = '../ckpt/movie_feature_epoch_index.npy'
 TEMP_TR_ARRAY = '../tempData/temp_train_array.npy'
 TEMP_VAL_ARRAY = '../tempData/temp_validate_array.npy'
 TEMP_TR_RAT_COUNTS = '../tempData/temp_tr_rat_counts.npy'
+TEMP_TR_ARRAY_USER = '../tempData/temp_train_array_sorted_by_user.npy' 
 
 
 CSV_TRAIN_FILE = '../myData/train_data.csv'
