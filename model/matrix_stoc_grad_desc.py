@@ -38,7 +38,7 @@ class MatrixModel(object):
 
         # Parameters in training
         self.feature_num = 100
-        self.lmbda = 0.1
+        self.lmbda = 0.04
         self.lrate = 0.05
 
         # Matrices for rating prediction
@@ -137,6 +137,7 @@ class MatrixModel(object):
             userIdx = self.invUserIdx[userRealID]
             predict_rating = self.predict_rating(movieIdx, userIdx)
             predict_rating = np.clip(predict_rating, 1.0, 5.0)
+            predict_rating = round(predict_rating)
             error = real_rating - predict_rating
             errors.append(error)
         accuracy = np.mean(np.abs(errors)<error_tol)
@@ -160,7 +161,7 @@ class MatrixModel(object):
 
 
 def main(argv):
-    max_epoch = 1200
+    max_epoch = 100
     # batch_size = 400
     batch_size = None
     matrix_model = MatrixModel()
