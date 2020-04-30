@@ -5,17 +5,15 @@ import sys
 import time
 import ALS_extra_data
 from const import *
-from matrix_stoc_grad_desc import MatrixModel
+from matrix_stoc_grad_desc import MatrixModel, mlp_run
 
 class ALS_MatrixModel(MatrixModel):
-    def __init__(self):
-        MatrixModel.__init__(self)
+    def __init__(self,feature_num,lmbda,index):
+        MatrixModel.__init__(self,feature_num,lmbda,"None",index)
         # use Alternating-least-square method
+        self.method = "alternating least square"
         self.userSortedTrainRating = np.load(TEMP_TR_ARRAY_USER)
         self.userSortedCounts = ALS_extra_data.getUserRatingCounts(self.userSortedTrainRating)
-        self.lrate = None
-        self.feature_num = 100
-        self.lmbda = 0.1
 
     # use Alternating-Least-Square to train 2 matrices
     def train_one_epoch(self):
@@ -36,8 +34,8 @@ class ALS_MatrixModel(MatrixModel):
             b = np.concatenate([b_rating, np.zeros((self.feature_num,))],axis=0)
             x, _res, _rank, _s = np.linalg.lstsq(a,b,rcond=None)
             self.userFeature[:,userIdx] = np.clip(x,-1.0,1.0)
-            if userIdx%1000 == 0:           
-                print("Finish the ratings of user {}".format(userIdx))
+            if userIdx%100000 == 0:           
+                print("Training index {}: Finish the ratings of user {}".format(self.index,userIdx))
         # train movie feature matrix
         startId = 0
         for countNum in self.train_rating_counts:
@@ -57,53 +55,27 @@ class ALS_MatrixModel(MatrixModel):
             b = np.concatenate([b_rating,np.zeros((self.feature_num,))], axis=0)
             x, _res, _rank, _s = np.linalg.lstsq(a,b,rcond=None)
             self.movieFeature[:,movieIdx] = np.clip(x,-1.0,1.0)
-            if movieIdx%100 == 0:           
-                print("Finish the ratings of movie {}".format(movieIdx))
-        
-            
+            if movieIdx%5000 == 0:           
+                print("Training index {}: Finish the ratings of movie {}".format(self.index,movieIdx))
 
+def single_run(arg_dict):
+    index = arg_dict['current_index']
+    max_epoch = arg_dict['max_epoch']
+    flag = arg_dict['flag']
+    feature_num = arg_dict['feature_num']
+    lmbda = arg_dict['lmbda']
 
-    def training(self, max_epoch, current_epoch=0):
-        for epoch in range(current_epoch, max_epoch):
-            if epoch != 0:
-                self.train_one_epoch()
-            self.save_matrix_model(epoch)
-            accuracy, rmse = self.evaluat_test()
-            self.write_log(epoch, accuracy, rmse)
-            # the number of checkpoints that we want to keep
-            keep_num = 5
-            self.delete_old_model(epoch-keep_num, 1)
-
-
-    def continue_training(self, max_epoch):
-        # Get the current epoch that we have finished training
-        with open(self.train_log,"r") as f:
-            content = f.read()
-            current_epoch_str = re.findall(r'[Ee]poch \d+', content)[-1]
-            current_epoch = int(current_epoch_str.split()[-1])
-        print("Continue training, loading the checkpoint at Epoch {}".format(current_epoch))
-        # Load the latest checkpoints
-        self.movieFeature = np.load(MOVIE_FEATURE_FILE.replace("index", str(current_epoch)))
-        self.userFeature = np.load(USER_FEATURE_FILE.replace("index", str(current_epoch)))
-        # Continue training from the next epoch
-        self.training(max_epoch, current_epoch+1)
-
-
-def main(argv):
-    max_epoch = 1200
-    ALS_model = ALS_MatrixModel()
-    flag = argv[1]
+    model = ALS_MatrixModel(feature_num,lmbda,index)
     if flag == 'continue':
-        ALS_model.continue_training(max_epoch)
+        model.continue_training(max_epoch)
     elif flag == 'start':
-        ALS_model.training(max_epoch)
-    elif flag == 'delete':
-        # Delete the old models manually
-        epoch_start = int(argv[2])
-        epoch_range = int(argv[3])
-        ALS_model.delete_old_model(epoch_start, epoch_range)
+        model.training(max_epoch)
     else:
-        print("Wrong parameter.")
+        print("Wrong flag! start or continue ?")
     
 if __name__ == '__main__':
-    main(sys.argv)
+    ALS_START_INDEX = 2000
+    MAX_EPOCH = 30
+
+    # training with multiple process
+    mlp_run(ALS_START_INDEX,MAX_EPOCH,'start')
