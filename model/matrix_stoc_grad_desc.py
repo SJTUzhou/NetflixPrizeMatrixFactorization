@@ -72,17 +72,19 @@ class MatrixModel(object):
         # prediction = movie average rating + user offset + the part of matrix factorization
         return np.sum(self.userFeature[:,userIdx]*self.movieFeature[:,movieIdx]) + self.movie_avg_ratings[movieIdx] + self.user_offsets[userIdx]
         
+
+    def stochastic_grad_desc(self, userIdxes, movieIdx, realRatings):
+        for i,userIdx in enumerate(userIdxes):
+            error = realRatings[i] - self.predict_rating(movieIdx, userIdx)
+            userValue, movieValue = self.userFeature[:,userIdx], self.movieFeature[:,movieIdx]
+            userValueCopy = deepcopy(userValue)
+            userValue += self.lrate*(error*movieValue - self.lmbda*userValue)
+            movieValue += self.lrate*(error*userValueCopy - self.lmbda*movieValue)
+            self.userFeature[:,userIdx] = np.clip(userValue,-1.0,1.0)
+            self.movieFeature[:,movieIdx] = np.clip(movieValue,-1.0,1.0)
+        
     def train_one_epoch(self):
         # use stochastic gradient descent method for training the 2 matrices
-        def stochastic_grad_desc(userIdxes, movieIdx, realRatings):
-            for i,userIdx in enumerate(userIdxes):
-                error = realRatings[i] - self.predict_rating(movieIdx, userIdx)
-                userValue, movieValue = self.userFeature[:,userIdx], self.movieFeature[:,movieIdx]
-                userValueCopy = deepcopy(userValue)
-                userValue += self.lrate*(error*movieValue - self.lmbda*userValue)
-                movieValue += self.lrate*(error*userValueCopy - self.lmbda*movieValue)
-                self.userFeature[:,userIdx] = np.clip(userValue,-1.0,1.0)
-                self.movieFeature[:,movieIdx] = np.clip(movieValue,-1.0,1.0)
         startId = 0
         for movieIdx, rating_num in enumerate(self.train_rating_counts):
             # At each step, extract and train a random batch of the ratings for the same film
@@ -92,7 +94,7 @@ class MatrixModel(object):
             # get the user index from the real user Ids
             realUserIds, realRatings = tr_ratings[:,1], tr_ratings[:,2]
             userIdxes = np.array([self.invUserIdx[Id] for Id in realUserIds])
-            stochastic_grad_desc(userIdxes, movieIdx, realRatings)
+            self.stochastic_grad_desc(userIdxes, movieIdx, realRatings)
             if movieIdx%5000 == 0:           
                 print("Training index {}: Finish the ratings of movie {}".format(self.index, movieIdx))
         
