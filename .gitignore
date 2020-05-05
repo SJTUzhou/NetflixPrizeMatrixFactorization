@@ -12,6 +12,7 @@ __pycache__/
 myData
 netflix-prize-data
 tempData
+ckpt
 
 # Distribution / packaging
 .vscode/
