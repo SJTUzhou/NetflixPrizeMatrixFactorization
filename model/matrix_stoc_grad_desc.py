@@ -250,5 +250,5 @@ if __name__ == '__main__':
     # training with single process
     # run_training(SGD_START_INDEX, MAX_EPOCH, sys.argv)
     
-    # training with multiple process
+    # training with multiple process, flag="continue|start"
     mlp_run(SGD_START_INDEX,MAX_EPOCH,'continue')

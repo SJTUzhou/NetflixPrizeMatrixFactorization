@@ -118,5 +118,5 @@ if __name__ == '__main__':
     ALS_START_INDEX = 2000
     MAX_EPOCH = 30
 
-    # training with multiple process
+    # training with multiple process, flag="continue|start"
     mlp_run(ALS_START_INDEX,MAX_EPOCH,'continue')
