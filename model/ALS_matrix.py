@@ -119,4 +119,4 @@ if __name__ == '__main__':
     MAX_EPOCH = 30
 
     # training with multiple process
-    mlp_run(ALS_START_INDEX,MAX_EPOCH,'start')
+    mlp_run(ALS_START_INDEX,MAX_EPOCH,'continue')

@@ -112,17 +112,20 @@ class MatrixModel(object):
             
     
     def continue_training(self, max_epoch):
-        # Get the current epoch that we have finished training
-        with open(self.train_log,"r") as f:
-            content = f.read()
-            current_epoch_str = re.findall(r'epoch \d+', content, flags=re.I)[-1]
-            current_epoch = int(current_epoch_str.split()[-1])
-            index = re.findall(r'training index ?: ?(\d+)', content, flags=re.I)[0]
-        print("Training index {}: Continue training, loading the checkpoint at Epoch {}".format(self.index,current_epoch))
-        # Load the latest checkpoints
-        self.load_matrix_model(index,current_epoch)
-        # Continue training from the next epoch
-        self.training(max_epoch, current_epoch+1)
+        if os.path.exists(self.train_log):
+            # Get the current epoch that we have finished training
+            with open(self.train_log,"r") as f:
+                content = f.read()
+                current_epoch_str = re.findall(r'epoch \d+', content, flags=re.I)[-1]
+                current_epoch = int(current_epoch_str.split()[-1])
+                index = re.findall(r'training index ?: ?(\d+)', content, flags=re.I)[0]
+            print("Training index {}: Continue training, loading the checkpoint at Epoch {}".format(self.index,current_epoch))
+            # Load the latest checkpoints
+            self.load_matrix_model(index,current_epoch)
+            # Continue training from the next epoch
+            self.training(max_epoch, current_epoch+1)
+        else:
+            self.training(max_epoch, current_epoch=0)
 
     def load_matrix_model(self, index, epoch):
         self.movieFeature = np.load(MOVIE_FEATURE_FILE.replace("epoch_index", str(index)+'_E'+str(epoch)))
@@ -243,9 +246,9 @@ def mlp_run(start_tr_index, max_epoch, flag):
 
 if __name__ == '__main__':
     SGD_START_INDEX = 1000
-    MAX_EPOCH = 30
+    MAX_EPOCH = 20
     # training with single process
     # run_training(SGD_START_INDEX, MAX_EPOCH, sys.argv)
     
     # training with multiple process
-    mlp_run(SGD_START_INDEX,MAX_EPOCH,'start')
+    mlp_run(SGD_START_INDEX,MAX_EPOCH,'continue')
