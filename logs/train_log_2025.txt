@@ -1,0 +1,39 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2025
+                    method: alternating least square
+                    feature_num: 10
+                    lrate: None
+                    lmbda: 0.15
+Training index 2025: Finish testing Epoch 0, validation accuracy 0.3089 with rmse 1.348
+Training index 2025: Finish testing Epoch 1, validation accuracy 0.4287 with rmse 0.9687
+Training index 2025: Finish testing Epoch 2, validation accuracy 0.4291 with rmse 0.9679
+Training index 2025: Finish testing Epoch 3, validation accuracy 0.4314 with rmse 0.9632
+Training index 2025: Finish testing Epoch 4, validation accuracy 0.4365 with rmse 0.9544
+Training index 2025: Finish testing Epoch 5, validation accuracy 0.4389 with rmse 0.9511
+Training index 2025: Finish testing Epoch 6, validation accuracy 0.4393 with rmse 0.9505
+Training index 2025: Finish testing Epoch 7, validation accuracy 0.4395 with rmse 0.9502
+Training index 2025: Finish testing Epoch 8, validation accuracy 0.4396 with rmse 0.95
+Training index 2025: Finish testing Epoch 9, validation accuracy 0.4397 with rmse 0.9498
+Training index 2025: Finish testing Epoch 10, validation accuracy 0.4397 with rmse 0.9496
+Training index 2025: Finish testing Epoch 11, validation accuracy 0.4398 with rmse 0.9495
+Training index 2025: Finish testing Epoch 12, validation accuracy 0.4398 with rmse 0.9494
+Training index 2025: Finish testing Epoch 13, validation accuracy 0.4398 with rmse 0.9494
+Training index 2025: Finish testing Epoch 14, validation accuracy 0.4399 with rmse 0.9493
+Training index 2025: Finish testing Epoch 15, validation accuracy 0.4399 with rmse 0.9493
+Training index 2025: Finish testing Epoch 16, validation accuracy 0.4399 with rmse 0.9492
+Training index 2025: Finish testing Epoch 17, validation accuracy 0.44 with rmse 0.9492
+Training index 2025: Finish testing Epoch 18, validation accuracy 0.44 with rmse 0.9492
+Training index 2025: Finish testing Epoch 19, validation accuracy 0.44 with rmse 0.9492
+Training index 2025: Finish testing Epoch 20, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 21, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 22, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 23, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 24, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 25, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 26, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 27, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 28, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 29, validation accuracy 0.44 with rmse 0.9491
+Training index 2025: Finish testing Epoch 30, validation accuracy 0.44 with rmse 0.9491

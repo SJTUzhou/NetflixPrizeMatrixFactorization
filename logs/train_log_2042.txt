@@ -1,0 +1,39 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2042
+                    method: alternating least square
+                    feature_num: 50
+                    lrate: None
+                    lmbda: 0
+Training index 2042: Finish testing Epoch 0, validation accuracy 0.2277 with rmse 1.79
+Training index 2042: Finish testing Epoch 1, validation accuracy 0.4101 with rmse 1.069
+Training index 2042: Finish testing Epoch 2, validation accuracy 0.4346 with rmse 1.029
+Training index 2042: Finish testing Epoch 3, validation accuracy 0.4487 with rmse 1.002
+Training index 2042: Finish testing Epoch 4, validation accuracy 0.4582 with rmse 0.9842
+Training index 2042: Finish testing Epoch 5, validation accuracy 0.4641 with rmse 0.9724
+Training index 2042: Finish testing Epoch 6, validation accuracy 0.4683 with rmse 0.9653
+Training index 2042: Finish testing Epoch 7, validation accuracy 0.4712 with rmse 0.9605
+Training index 2042: Finish testing Epoch 8, validation accuracy 0.4733 with rmse 0.9558
+Training index 2042: Finish testing Epoch 9, validation accuracy 0.475 with rmse 0.9529
+Training index 2042: Finish testing Epoch 10, validation accuracy 0.4765 with rmse 0.9505
+Training index 2042: Finish testing Epoch 11, validation accuracy 0.4775 with rmse 0.948
+Training index 2042: Finish testing Epoch 12, validation accuracy 0.4783 with rmse 0.946
+Training index 2042: Finish testing Epoch 13, validation accuracy 0.479 with rmse 0.9444
+Training index 2042: Finish testing Epoch 14, validation accuracy 0.4797 with rmse 0.9427
+Training index 2042: Finish testing Epoch 15, validation accuracy 0.4801 with rmse 0.9411
+Training index 2042: Finish testing Epoch 16, validation accuracy 0.4805 with rmse 0.9398
+Training index 2042: Finish testing Epoch 17, validation accuracy 0.4809 with rmse 0.939
+Training index 2042: Finish testing Epoch 18, validation accuracy 0.4814 with rmse 0.9379
+Training index 2042: Finish testing Epoch 19, validation accuracy 0.4815 with rmse 0.9369
+Training index 2042: Finish testing Epoch 20, validation accuracy 0.4819 with rmse 0.9356
+Training index 2042: Finish testing Epoch 21, validation accuracy 0.4822 with rmse 0.9354
+Training index 2042: Finish testing Epoch 22, validation accuracy 0.4823 with rmse 0.9347
+Training index 2042: Finish testing Epoch 23, validation accuracy 0.4824 with rmse 0.9343
+Training index 2042: Finish testing Epoch 24, validation accuracy 0.4824 with rmse 0.9339
+Training index 2042: Finish testing Epoch 25, validation accuracy 0.4825 with rmse 0.9332
+Training index 2042: Finish testing Epoch 26, validation accuracy 0.4826 with rmse 0.933
+Training index 2042: Finish testing Epoch 27, validation accuracy 0.4828 with rmse 0.9327
+Training index 2042: Finish testing Epoch 28, validation accuracy 0.4828 with rmse 0.9323
+Training index 2042: Finish testing Epoch 29, validation accuracy 0.483 with rmse 0.9319
+Training index 2042: Finish testing Epoch 30, validation accuracy 0.4833 with rmse 0.9312

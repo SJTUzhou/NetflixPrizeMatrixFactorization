@@ -95,7 +95,7 @@ def single_run(arg_dict):
         print("Wrong flag! start or continue ?")
 
 def mlp_run(start_tr_index, max_epoch, flag):
-    feature_num_list = [5,10,20,50,100,200]
+    feature_num_list = [5,10,20,50,100]
     lmbda_list = [0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.15,0.2,0.4]
     tr_index = deepcopy(start_tr_index)
     arg_dict_list = []
@@ -116,7 +116,7 @@ def mlp_run(start_tr_index, max_epoch, flag):
     
 if __name__ == '__main__':
     ALS_START_INDEX = 2000
-    MAX_EPOCH = 30
+    MAX_EPOCH = 15
 
     # training with multiple process, flag="continue|start"
     mlp_run(ALS_START_INDEX,MAX_EPOCH,'continue')

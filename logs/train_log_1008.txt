@@ -1,0 +1,25 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 1008
+                    method: stochastic gradient descent
+                    feature_num: 5
+                    lrate: 0.05
+                    lmbda: 0.08
+Training index 1008: Finish testing Epoch 0, validation accuracy 0.3463 with rmse 1.197
+Training index 1008: Finish testing Epoch 1, validation accuracy 0.4295 with rmse 0.9684
+Training index 1008: Finish testing Epoch 2, validation accuracy 0.4412 with rmse 0.9494
+Training index 1008: Finish testing Epoch 3, validation accuracy 0.4457 with rmse 0.942
+Training index 1008: Finish testing Epoch 4, validation accuracy 0.448 with rmse 0.9378
+Training index 1008: Finish testing Epoch 5, validation accuracy 0.4498 with rmse 0.9345
+Training index 1008: Finish testing Epoch 6, validation accuracy 0.4504 with rmse 0.933
+Training index 1008: Finish testing Epoch 7, validation accuracy 0.4513 with rmse 0.9321
+Training index 1008: Finish testing Epoch 8, validation accuracy 0.4511 with rmse 0.9317
+Training index 1008: Finish testing Epoch 9, validation accuracy 0.4518 with rmse 0.931
+Training index 1008: Finish testing Epoch 10, validation accuracy 0.4517 with rmse 0.9307
+Training index 1008: Finish testing Epoch 11, validation accuracy 0.4519 with rmse 0.9302
+Training index 1008: Finish testing Epoch 12, validation accuracy 0.4521 with rmse 0.9303
+Training index 1008: Finish testing Epoch 13, validation accuracy 0.4521 with rmse 0.9301
+Training index 1008: Finish testing Epoch 14, validation accuracy 0.452 with rmse 0.9304
+Training index 1008: Finish testing Epoch 15, validation accuracy 0.452 with rmse 0.9302
+Training index 1008: Finish testing Epoch 16, validation accuracy 0.452 with rmse 0.9303

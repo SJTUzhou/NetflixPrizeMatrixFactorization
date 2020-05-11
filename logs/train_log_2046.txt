@@ -1,0 +1,29 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2046
+                    method: alternating least square
+                    feature_num: 50
+                    lrate: None
+                    lmbda: 0.04
+Training index 2046: Finish testing Epoch 0, validation accuracy 0.2276 with rmse 1.79
+Training index 2046: Finish testing Epoch 1, validation accuracy 0.4322 with rmse 0.9648
+Training index 2046: Finish testing Epoch 2, validation accuracy 0.4654 with rmse 0.918
+Training index 2046: Finish testing Epoch 3, validation accuracy 0.478 with rmse 0.8956
+Training index 2046: Finish testing Epoch 4, validation accuracy 0.4829 with rmse 0.8852
+Training index 2046: Finish testing Epoch 5, validation accuracy 0.4856 with rmse 0.88
+Training index 2046: Finish testing Epoch 6, validation accuracy 0.4872 with rmse 0.8772
+Training index 2046: Finish testing Epoch 7, validation accuracy 0.4882 with rmse 0.8758
+Training index 2046: Finish testing Epoch 8, validation accuracy 0.4888 with rmse 0.8748
+Training index 2046: Finish testing Epoch 9, validation accuracy 0.4893 with rmse 0.8741
+Training index 2046: Finish testing Epoch 10, validation accuracy 0.4896 with rmse 0.8735
+Training index 2046: Finish testing Epoch 11, validation accuracy 0.4896 with rmse 0.8732
+Training index 2046: Finish testing Epoch 12, validation accuracy 0.4898 with rmse 0.873
+Training index 2046: Finish testing Epoch 13, validation accuracy 0.4899 with rmse 0.8729
+Training index 2046: Finish testing Epoch 14, validation accuracy 0.4901 with rmse 0.8727
+Training index 2046: Finish testing Epoch 15, validation accuracy 0.4901 with rmse 0.8725
+Training index 2046: Finish testing Epoch 16, validation accuracy 0.4902 with rmse 0.8724
+Training index 2046: Finish testing Epoch 17, validation accuracy 0.4904 with rmse 0.8722
+Training index 2046: Finish testing Epoch 18, validation accuracy 0.4905 with rmse 0.8722
+Training index 2046: Finish testing Epoch 19, validation accuracy 0.4905 with rmse 0.8722
+Training index 2046: Finish testing Epoch 20, validation accuracy 0.4906 with rmse 0.8721

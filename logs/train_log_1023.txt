@@ -1,0 +1,29 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 1023
+                    method: stochastic gradient descent
+                    feature_num: 10
+                    lrate: 0.05
+                    lmbda: 0.09
+Training index 1023: Finish testing Epoch 0, validation accuracy 0.3083 with rmse 1.351
+Training index 1023: Finish testing Epoch 1, validation accuracy 0.4308 with rmse 0.9663
+Training index 1023: Finish testing Epoch 2, validation accuracy 0.4405 with rmse 0.9505
+Training index 1023: Finish testing Epoch 3, validation accuracy 0.4438 with rmse 0.9446
+Training index 1023: Finish testing Epoch 4, validation accuracy 0.4465 with rmse 0.94
+Training index 1023: Finish testing Epoch 5, validation accuracy 0.4483 with rmse 0.9366
+Training index 1023: Finish testing Epoch 6, validation accuracy 0.4493 with rmse 0.9348
+Training index 1023: Finish testing Epoch 7, validation accuracy 0.45 with rmse 0.9334
+Training index 1023: Finish testing Epoch 8, validation accuracy 0.4502 with rmse 0.9325
+Training index 1023: Finish testing Epoch 9, validation accuracy 0.4508 with rmse 0.9321
+Training index 1023: Finish testing Epoch 10, validation accuracy 0.4508 with rmse 0.9312
+Training index 1023: Finish testing Epoch 11, validation accuracy 0.4514 with rmse 0.931
+Training index 1023: Finish testing Epoch 12, validation accuracy 0.4518 with rmse 0.9304
+Training index 1023: Finish testing Epoch 13, validation accuracy 0.4515 with rmse 0.9307
+Training index 1023: Finish testing Epoch 14, validation accuracy 0.4518 with rmse 0.9302
+Training index 1023: Finish testing Epoch 15, validation accuracy 0.4521 with rmse 0.9297
+Training index 1023: Finish testing Epoch 16, validation accuracy 0.4519 with rmse 0.9294
+Training index 1023: Finish testing Epoch 17, validation accuracy 0.4519 with rmse 0.9296
+Training index 1023: Finish testing Epoch 18, validation accuracy 0.4522 with rmse 0.9296
+Training index 1023: Finish testing Epoch 19, validation accuracy 0.4522 with rmse 0.929
+Training index 1023: Finish testing Epoch 20, validation accuracy 0.4521 with rmse 0.9291

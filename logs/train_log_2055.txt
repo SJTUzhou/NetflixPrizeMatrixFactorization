@@ -1,0 +1,14 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2055
+                    method: alternating least square
+                    feature_num: 50
+                    lrate: None
+                    lmbda: 0.4
+Training index 2055: Finish testing Epoch 0, validation accuracy 0.2275 with rmse 1.791
+Training index 2055: Finish testing Epoch 1, validation accuracy 0.4287 with rmse 0.9687
+Training index 2055: Finish testing Epoch 2, validation accuracy 0.4286 with rmse 0.969
+Training index 2055: Finish testing Epoch 3, validation accuracy 0.4285 with rmse 0.969
+Training index 2055: Finish testing Epoch 4, validation accuracy 0.4285 with rmse 0.969
+Training index 2055: Finish testing Epoch 5, validation accuracy 0.4285 with rmse 0.969

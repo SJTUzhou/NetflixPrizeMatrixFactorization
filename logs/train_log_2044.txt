@@ -1,0 +1,24 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2044
+                    method: alternating least square
+                    feature_num: 50
+                    lrate: None
+                    lmbda: 0.02
+Training index 2044: Finish testing Epoch 0, validation accuracy 0.2282 with rmse 1.786
+Training index 2044: Finish testing Epoch 1, validation accuracy 0.43 with rmse 0.9756
+Training index 2044: Finish testing Epoch 2, validation accuracy 0.4612 with rmse 0.9366
+Training index 2044: Finish testing Epoch 3, validation accuracy 0.4773 with rmse 0.9073
+Training index 2044: Finish testing Epoch 4, validation accuracy 0.4848 with rmse 0.893
+Training index 2044: Finish testing Epoch 5, validation accuracy 0.4889 with rmse 0.8861
+Training index 2044: Finish testing Epoch 6, validation accuracy 0.4915 with rmse 0.8824
+Training index 2044: Finish testing Epoch 7, validation accuracy 0.493 with rmse 0.88
+Training index 2044: Finish testing Epoch 8, validation accuracy 0.4941 with rmse 0.8782
+Training index 2044: Finish testing Epoch 9, validation accuracy 0.4949 with rmse 0.8771
+Training index 2044: Finish testing Epoch 10, validation accuracy 0.4956 with rmse 0.8759
+Training index 2044: Finish testing Epoch 11, validation accuracy 0.496 with rmse 0.8751
+Training index 2044: Finish testing Epoch 12, validation accuracy 0.4963 with rmse 0.8743
+Training index 2044: Finish testing Epoch 13, validation accuracy 0.4968 with rmse 0.8739
+Training index 2044: Finish testing Epoch 14, validation accuracy 0.4969 with rmse 0.8737
+Training index 2044: Finish testing Epoch 15, validation accuracy 0.4971 with rmse 0.8734

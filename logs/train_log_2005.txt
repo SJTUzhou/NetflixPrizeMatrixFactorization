@@ -1,0 +1,39 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2005
+                    method: alternating least square
+                    feature_num: 5
+                    lrate: None
+                    lmbda: 0.05
+Training index 2005: Finish testing Epoch 0, validation accuracy 0.3475 with rmse 1.196
+Training index 2005: Finish testing Epoch 1, validation accuracy 0.4288 with rmse 0.969
+Training index 2005: Finish testing Epoch 2, validation accuracy 0.4427 with rmse 0.9477
+Training index 2005: Finish testing Epoch 3, validation accuracy 0.4572 with rmse 0.9273
+Training index 2005: Finish testing Epoch 4, validation accuracy 0.4616 with rmse 0.9203
+Training index 2005: Finish testing Epoch 5, validation accuracy 0.4624 with rmse 0.9182
+Training index 2005: Finish testing Epoch 6, validation accuracy 0.4626 with rmse 0.917
+Training index 2005: Finish testing Epoch 7, validation accuracy 0.4627 with rmse 0.9163
+Training index 2005: Finish testing Epoch 8, validation accuracy 0.4628 with rmse 0.9159
+Training index 2005: Finish testing Epoch 9, validation accuracy 0.4628 with rmse 0.9157
+Training index 2005: Finish testing Epoch 10, validation accuracy 0.4628 with rmse 0.9155
+Training index 2005: Finish testing Epoch 11, validation accuracy 0.4627 with rmse 0.9153
+Training index 2005: Finish testing Epoch 12, validation accuracy 0.4627 with rmse 0.915
+Training index 2005: Finish testing Epoch 13, validation accuracy 0.4626 with rmse 0.9149
+Training index 2005: Finish testing Epoch 14, validation accuracy 0.4626 with rmse 0.9147
+Training index 2005: Finish testing Epoch 15, validation accuracy 0.4624 with rmse 0.9146
+Training index 2005: Finish testing Epoch 16, validation accuracy 0.4622 with rmse 0.9144
+Training index 2005: Finish testing Epoch 17, validation accuracy 0.4622 with rmse 0.9142
+Training index 2005: Finish testing Epoch 18, validation accuracy 0.4622 with rmse 0.9141
+Training index 2005: Finish testing Epoch 19, validation accuracy 0.4621 with rmse 0.914
+Training index 2005: Finish testing Epoch 20, validation accuracy 0.4621 with rmse 0.9138
+Training index 2005: Finish testing Epoch 21, validation accuracy 0.4621 with rmse 0.9136
+Training index 2005: Finish testing Epoch 22, validation accuracy 0.4621 with rmse 0.9135
+Training index 2005: Finish testing Epoch 23, validation accuracy 0.4621 with rmse 0.9135
+Training index 2005: Finish testing Epoch 24, validation accuracy 0.4619 with rmse 0.9136
+Training index 2005: Finish testing Epoch 25, validation accuracy 0.4618 with rmse 0.9135
+Training index 2005: Finish testing Epoch 26, validation accuracy 0.4617 with rmse 0.9134
+Training index 2005: Finish testing Epoch 27, validation accuracy 0.4616 with rmse 0.9134
+Training index 2005: Finish testing Epoch 28, validation accuracy 0.4617 with rmse 0.9133
+Training index 2005: Finish testing Epoch 29, validation accuracy 0.4617 with rmse 0.9132
+Training index 2005: Finish testing Epoch 30, validation accuracy 0.4617 with rmse 0.9132

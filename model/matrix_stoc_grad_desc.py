@@ -119,11 +119,20 @@ class MatrixModel(object):
                 current_epoch_str = re.findall(r'epoch \d+', content, flags=re.I)[-1]
                 current_epoch = int(current_epoch_str.split()[-1])
                 index = re.findall(r'training index ?: ?(\d+)', content, flags=re.I)[0]
-            print("Training index {}: Continue training, loading the checkpoint at Epoch {}".format(self.index,current_epoch))
-            # Load the latest checkpoints
-            self.load_matrix_model(index,current_epoch)
-            # Continue training from the next epoch
-            self.training(max_epoch, current_epoch+1)
+                # decide whether the training has converged
+                de_num = 3
+                de_tol = 2e-4
+                de_rmse= [float(rmse_str) for rmse_str in re.findall(r'rmse (\d+\.?\d*)',content,flags=re.I)[-de_num:]]
+            # reach the max epoch or training has converged, stop it
+            if current_epoch >= max_epoch or abs(de_rmse[-1]-np.mean(de_rmse))<=de_tol:
+                print("Finish Training index {} at Epoch {}".format(self.index,current_epoch))
+                return
+            else:
+                # Load the latest checkpoints
+                print("Training index {}: Continue training, loading the checkpoint at Epoch {}".format(self.index,current_epoch)) 
+                self.load_matrix_model(index,current_epoch)
+                # Continue training from the next epoch
+                self.training(max_epoch, current_epoch+1)
         else:
             self.training(max_epoch, current_epoch=0)
 
@@ -182,7 +191,7 @@ class MatrixModel(object):
 
 def run_training(start_tr_index, max_epoch, argv):
     train_dict = {}
-    feature_num_list = [5,10,20,50,100,200]
+    feature_num_list = [5,10,50,100,200]
     lmbda_list = [0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.15,0.2,0.4]
     last_tr_index = start_tr_index + len(feature_num_list)*len(lmbda_list)
     tr_index = deepcopy(start_tr_index)
@@ -224,7 +233,7 @@ def single_run(arg_dict):
 
 
 def mlp_run(start_tr_index, max_epoch, flag):
-    feature_num_list = [5,10,20,50,100,200]
+    feature_num_list = [5,10,50]
     lmbda_list = [0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.15,0.2,0.4]
     tr_index = deepcopy(start_tr_index)
     arg_dict_list = []

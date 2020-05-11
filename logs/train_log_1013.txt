@@ -1,0 +1,29 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 1013
+                    method: stochastic gradient descent
+                    feature_num: 5
+                    lrate: 0.05
+                    lmbda: 0.4
+Training index 1013: Finish testing Epoch 0, validation accuracy 0.3467 with rmse 1.198
+Training index 1013: Finish testing Epoch 1, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 2, validation accuracy 0.4285 with rmse 0.969
+Training index 1013: Finish testing Epoch 3, validation accuracy 0.4286 with rmse 0.969
+Training index 1013: Finish testing Epoch 4, validation accuracy 0.4285 with rmse 0.969
+Training index 1013: Finish testing Epoch 5, validation accuracy 0.4285 with rmse 0.969
+Training index 1013: Finish testing Epoch 6, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 7, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 8, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 9, validation accuracy 0.4285 with rmse 0.969
+Training index 1013: Finish testing Epoch 10, validation accuracy 0.4285 with rmse 0.969
+Training index 1013: Finish testing Epoch 11, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 12, validation accuracy 0.4285 with rmse 0.969
+Training index 1013: Finish testing Epoch 13, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 14, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 15, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 16, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 17, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 18, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 19, validation accuracy 0.4285 with rmse 0.9691
+Training index 1013: Finish testing Epoch 20, validation accuracy 0.4285 with rmse 0.9691

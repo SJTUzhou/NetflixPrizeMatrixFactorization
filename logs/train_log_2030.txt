@@ -1,0 +1,39 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2030
+                    method: alternating least square
+                    feature_num: 20
+                    lrate: None
+                    lmbda: 0.02
+Training index 2030: Finish testing Epoch 0, validation accuracy 0.27 with rmse 1.538
+Training index 2030: Finish testing Epoch 1, validation accuracy 0.4291 with rmse 0.9735
+Training index 2030: Finish testing Epoch 2, validation accuracy 0.4573 with rmse 0.9389
+Training index 2030: Finish testing Epoch 3, validation accuracy 0.4732 with rmse 0.9119
+Training index 2030: Finish testing Epoch 4, validation accuracy 0.4799 with rmse 0.8967
+Training index 2030: Finish testing Epoch 5, validation accuracy 0.4837 with rmse 0.8882
+Training index 2030: Finish testing Epoch 6, validation accuracy 0.486 with rmse 0.8838
+Training index 2030: Finish testing Epoch 7, validation accuracy 0.487 with rmse 0.8814
+Training index 2030: Finish testing Epoch 8, validation accuracy 0.4879 with rmse 0.8799
+Training index 2030: Finish testing Epoch 9, validation accuracy 0.4884 with rmse 0.8789
+Training index 2030: Finish testing Epoch 10, validation accuracy 0.4887 with rmse 0.8784
+Training index 2030: Finish testing Epoch 11, validation accuracy 0.489 with rmse 0.878
+Training index 2030: Finish testing Epoch 12, validation accuracy 0.489 with rmse 0.8776
+Training index 2030: Finish testing Epoch 13, validation accuracy 0.4892 with rmse 0.8773
+Training index 2030: Finish testing Epoch 14, validation accuracy 0.4895 with rmse 0.8769
+Training index 2030: Finish testing Epoch 15, validation accuracy 0.4895 with rmse 0.8767
+Training index 2030: Finish testing Epoch 16, validation accuracy 0.4896 with rmse 0.8766
+Training index 2030: Finish testing Epoch 17, validation accuracy 0.4896 with rmse 0.8764
+Training index 2030: Finish testing Epoch 18, validation accuracy 0.4896 with rmse 0.8764
+Training index 2030: Finish testing Epoch 19, validation accuracy 0.4896 with rmse 0.8763
+Training index 2030: Finish testing Epoch 20, validation accuracy 0.4897 with rmse 0.8762
+Training index 2030: Finish testing Epoch 21, validation accuracy 0.4899 with rmse 0.876
+Training index 2030: Finish testing Epoch 22, validation accuracy 0.4899 with rmse 0.8758
+Training index 2030: Finish testing Epoch 23, validation accuracy 0.4899 with rmse 0.8757
+Training index 2030: Finish testing Epoch 24, validation accuracy 0.49 with rmse 0.8756
+Training index 2030: Finish testing Epoch 25, validation accuracy 0.49 with rmse 0.8756
+Training index 2030: Finish testing Epoch 26, validation accuracy 0.4901 with rmse 0.8755
+Training index 2030: Finish testing Epoch 27, validation accuracy 0.4901 with rmse 0.8754
+Training index 2030: Finish testing Epoch 28, validation accuracy 0.4901 with rmse 0.8754
+Training index 2030: Finish testing Epoch 29, validation accuracy 0.4901 with rmse 0.8754
+Training index 2030: Finish testing Epoch 30, validation accuracy 0.4902 with rmse 0.8753
