@@ -1,0 +1,29 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 1032
+                    method: stochastic gradient descent
+                    feature_num: 50
+                    lrate: 0.05
+                    lmbda: 0.04
+Training index 1032: Finish testing Epoch 0, validation accuracy 0.2282 with rmse 1.787
+Training index 1032: Finish testing Epoch 1, validation accuracy 0.4241 with rmse 0.9912
+Training index 1032: Finish testing Epoch 2, validation accuracy 0.4472 with rmse 0.9473
+Training index 1032: Finish testing Epoch 3, validation accuracy 0.4569 with rmse 0.9287
+Training index 1032: Finish testing Epoch 4, validation accuracy 0.4627 with rmse 0.9171
+Training index 1032: Finish testing Epoch 5, validation accuracy 0.4664 with rmse 0.9106
+Training index 1032: Finish testing Epoch 6, validation accuracy 0.4683 with rmse 0.9065
+Training index 1032: Finish testing Epoch 7, validation accuracy 0.4702 with rmse 0.9033
+Training index 1032: Finish testing Epoch 8, validation accuracy 0.4719 with rmse 0.9006
+Training index 1032: Finish testing Epoch 9, validation accuracy 0.4729 with rmse 0.899
+Training index 1032: Finish testing Epoch 10, validation accuracy 0.4741 with rmse 0.8987
+Training index 1032: Finish testing Epoch 11, validation accuracy 0.4747 with rmse 0.8974
+Training index 1032: Finish testing Epoch 12, validation accuracy 0.475 with rmse 0.8963
+Training index 1032: Finish testing Epoch 13, validation accuracy 0.4754 with rmse 0.896
+Training index 1032: Finish testing Epoch 14, validation accuracy 0.4762 with rmse 0.8953
+Training index 1032: Finish testing Epoch 15, validation accuracy 0.476 with rmse 0.8949
+Training index 1032: Finish testing Epoch 16, validation accuracy 0.4766 with rmse 0.8949
+Training index 1032: Finish testing Epoch 17, validation accuracy 0.4762 with rmse 0.895
+Training index 1032: Finish testing Epoch 18, validation accuracy 0.4765 with rmse 0.8946
+Training index 1032: Finish testing Epoch 19, validation accuracy 0.4769 with rmse 0.8945
+Training index 1032: Finish testing Epoch 20, validation accuracy 0.477 with rmse 0.8936

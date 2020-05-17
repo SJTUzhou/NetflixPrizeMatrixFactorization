@@ -1,0 +1,19 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 1040
+                    method: stochastic gradient descent
+                    feature_num: 50
+                    lrate: 0.05
+                    lmbda: 0.2
+Training index 1040: Finish testing Epoch 0, validation accuracy 0.2271 with rmse 1.789
+Training index 1040: Finish testing Epoch 1, validation accuracy 0.4277 with rmse 0.9712
+Training index 1040: Finish testing Epoch 2, validation accuracy 0.4285 with rmse 0.9691
+Training index 1040: Finish testing Epoch 3, validation accuracy 0.4294 with rmse 0.9672
+Training index 1040: Finish testing Epoch 4, validation accuracy 0.4309 with rmse 0.9643
+Training index 1040: Finish testing Epoch 5, validation accuracy 0.4319 with rmse 0.9626
+Training index 1040: Finish testing Epoch 6, validation accuracy 0.4322 with rmse 0.9618
+Training index 1040: Finish testing Epoch 7, validation accuracy 0.4323 with rmse 0.9616
+Training index 1040: Finish testing Epoch 8, validation accuracy 0.4325 with rmse 0.9613
+Training index 1040: Finish testing Epoch 9, validation accuracy 0.4327 with rmse 0.9611
+Training index 1040: Finish testing Epoch 10, validation accuracy 0.4327 with rmse 0.9611

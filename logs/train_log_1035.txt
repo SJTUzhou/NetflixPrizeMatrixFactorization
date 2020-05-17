@@ -1,0 +1,29 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 1035
+                    method: stochastic gradient descent
+                    feature_num: 50
+                    lrate: 0.05
+                    lmbda: 0.07
+Training index 1035: Finish testing Epoch 0, validation accuracy 0.2278 with rmse 1.789
+Training index 1035: Finish testing Epoch 1, validation accuracy 0.4274 with rmse 0.9788
+Training index 1035: Finish testing Epoch 2, validation accuracy 0.4433 with rmse 0.9484
+Training index 1035: Finish testing Epoch 3, validation accuracy 0.4498 with rmse 0.9365
+Training index 1035: Finish testing Epoch 4, validation accuracy 0.4535 with rmse 0.9295
+Training index 1035: Finish testing Epoch 5, validation accuracy 0.4548 with rmse 0.9263
+Training index 1035: Finish testing Epoch 6, validation accuracy 0.4565 with rmse 0.9229
+Training index 1035: Finish testing Epoch 7, validation accuracy 0.4573 with rmse 0.9215
+Training index 1035: Finish testing Epoch 8, validation accuracy 0.4584 with rmse 0.9201
+Training index 1035: Finish testing Epoch 9, validation accuracy 0.4588 with rmse 0.9189
+Training index 1035: Finish testing Epoch 10, validation accuracy 0.4596 with rmse 0.9184
+Training index 1035: Finish testing Epoch 11, validation accuracy 0.4595 with rmse 0.9175
+Training index 1035: Finish testing Epoch 12, validation accuracy 0.4599 with rmse 0.9171
+Training index 1035: Finish testing Epoch 13, validation accuracy 0.4603 with rmse 0.9167
+Training index 1035: Finish testing Epoch 14, validation accuracy 0.4604 with rmse 0.9162
+Training index 1035: Finish testing Epoch 15, validation accuracy 0.4609 with rmse 0.9158
+Training index 1035: Finish testing Epoch 16, validation accuracy 0.461 with rmse 0.9156
+Training index 1035: Finish testing Epoch 17, validation accuracy 0.461 with rmse 0.915
+Training index 1035: Finish testing Epoch 18, validation accuracy 0.461 with rmse 0.9153
+Training index 1035: Finish testing Epoch 19, validation accuracy 0.4614 with rmse 0.9147
+Training index 1035: Finish testing Epoch 20, validation accuracy 0.4617 with rmse 0.9142
