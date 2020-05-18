@@ -43,7 +43,7 @@ def plotRecordEvolution(trainRecords):
         plt.ylabel(ylabel)
         plt.title(ylabel)
     trivialRMSE = 0.9691
-    rmseTicks = [0.010*i for i in range(87,97)] + [trivialRMSE]
+    rmseTicks = [0.010*i for i in range(87,97)] + [trivialRMSE,0.98,1.0]
     trivialAccuracy = 0.4285
     plt.subplot(121)
     plt.hlines(trivialRMSE,xmin,xmax,'r',"dashed",label="trivial RMSE")
@@ -68,7 +68,7 @@ def plotRecordResult(trainRecords):
     '''
     trivialRMSE = 0.9691
     lambdaTicks = [0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.15,0.2,0.4]
-    rmseTicks = [0.010*i for i in range(87,97)] + [trivialRMSE]
+    rmseTicks = [0.010*i for i in range(86,97)] + [trivialRMSE,0.98,1.0,1.02]
     recordDict = defaultdict(list)
     for record in trainRecords:
         myKey = record.method + '_Feature_Num_' + str(record.featureNum)
@@ -97,7 +97,7 @@ if __name__=="__main__":
     trainRecords = formatTrainRecords(logFiles)
     plotRecordResult(trainRecords)
 
-    selectedIndex = [1000,2000,1016,2016]
+    selectedIndex = [1000,2000,1016,2016,1031,2045]
     selectedRecords = []
     for record in trainRecords:
         if record.index in selectedIndex:

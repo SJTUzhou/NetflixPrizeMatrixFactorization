@@ -1,0 +1,24 @@
+dataset index: 1
+                    train datasize: 99484395
+                    validation datasize: 996112
+                    training index: 2062
+                    method: alternating least square
+                    feature_num: 100
+                    lrate: None
+                    lmbda: 0.06
+Training index 2062: Finish testing Epoch 0, validation accuracy 0.2033 with rmse 1.943
+Training index 2062: Finish testing Epoch 1, validation accuracy 0.4328 with rmse 0.9616
+Training index 2062: Finish testing Epoch 2, validation accuracy 0.4605 with rmse 0.9189
+Training index 2062: Finish testing Epoch 3, validation accuracy 0.4709 with rmse 0.9007
+Training index 2062: Finish testing Epoch 4, validation accuracy 0.4742 with rmse 0.8941
+Training index 2062: Finish testing Epoch 5, validation accuracy 0.4757 with rmse 0.8911
+Training index 2062: Finish testing Epoch 6, validation accuracy 0.4764 with rmse 0.8897
+Training index 2062: Finish testing Epoch 7, validation accuracy 0.4768 with rmse 0.8889
+Training index 2062: Finish testing Epoch 8, validation accuracy 0.4771 with rmse 0.8885
+Training index 2062: Finish testing Epoch 9, validation accuracy 0.4774 with rmse 0.8881
+Training index 2062: Finish testing Epoch 10, validation accuracy 0.4775 with rmse 0.8879
+Training index 2062: Finish testing Epoch 11, validation accuracy 0.4776 with rmse 0.8878
+Training index 2062: Finish testing Epoch 12, validation accuracy 0.4777 with rmse 0.8876
+Training index 2062: Finish testing Epoch 13, validation accuracy 0.4778 with rmse 0.8875
+Training index 2062: Finish testing Epoch 14, validation accuracy 0.4779 with rmse 0.8873
+Training index 2062: Finish testing Epoch 15, validation accuracy 0.478 with rmse 0.8873
