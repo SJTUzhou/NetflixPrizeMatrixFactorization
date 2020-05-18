@@ -9,7 +9,7 @@ QUALIFYING_FILE = '../netflix-prize-data/qualifying.txt'
 # constants
 MOVIE_NUM = 17770
 USER_NUM = 480189
-VAL_TR_SPLIT_RATIO = 0.012
+VAL_TR_SPLIT_RATIO = 0.03
 
 # stored temporary checkpoints and traing arrays
 USER_FEATURE_FILE = '../ckpt/user_feature_epoch_index.npy'

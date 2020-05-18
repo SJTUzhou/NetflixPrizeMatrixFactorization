@@ -156,6 +156,7 @@ def divide_val_tr_data(m_u_ratings, userIds, rat_counts, split_ratio):
 
 def prepare_tr_val_data():
     ''' Prepare the train dataset and the validation dataset'''
+    print("Start preparing train and validation data")
     movie_user_ratings = np.load(NPY_RATING_FILE)
     userIds = np.load(NPY_USER_ID_FILE)
     rating_counts = np.load(NPY_RATING_COUNTS_FILE)

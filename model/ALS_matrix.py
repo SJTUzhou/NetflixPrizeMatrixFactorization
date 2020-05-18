@@ -63,7 +63,7 @@ class ALS_MatrixModel(MatrixModel):
     def write_log(self, epoch, accuracy, rmse):
         with open(self.train_log, 'a+') as f:
             if epoch==0:
-                head_str = "dataset index: 1\n\
+                head_str = "\
                     train datasize: {}\n\
                     validation datasize: {}\n\
                     training index: {}\n\

@@ -97,7 +97,19 @@ class MatrixModel(object):
             self.stochastic_grad_desc(userIdxes, movieIdx, realRatings)
             if movieIdx%5000 == 0:           
                 print("Training index {}: Finish the ratings of movie {}".format(self.index, movieIdx))
-        
+    
+    def is_convergent(self):
+        with open(self.train_log,"r") as f:
+            content = f.read()
+            # decide whether the training has converged
+            de_num = 3
+            de_tol = 2e-4
+            de_rmse= [float(rmse_str) for rmse_str in re.findall(r'rmse (\d+\.?\d*)',content,flags=re.I)[-de_num:]]
+        # training has converged, stop it
+        if abs(de_rmse[-1]-np.mean(de_rmse))<=de_tol:
+            return True
+        else:
+            return False
 
     def training(self, max_epoch, current_epoch=0):
         for epoch in range(current_epoch, max_epoch+1):
@@ -109,6 +121,8 @@ class MatrixModel(object):
             # the number of checkpoints that we want to keep
             keep_num = 1
             self.delete_old_model(epoch-keep_num, 1)
+            if self.is_convergent():
+                return
             
     
     def continue_training(self, max_epoch):
@@ -119,12 +133,8 @@ class MatrixModel(object):
                 current_epoch_str = re.findall(r'epoch \d+', content, flags=re.I)[-1]
                 current_epoch = int(current_epoch_str.split()[-1])
                 index = re.findall(r'training index ?: ?(\d+)', content, flags=re.I)[0]
-                # decide whether the training has converged
-                de_num = 3
-                de_tol = 2e-4
-                de_rmse= [float(rmse_str) for rmse_str in re.findall(r'rmse (\d+\.?\d*)',content,flags=re.I)[-de_num:]]
             # reach the max epoch or training has converged, stop it
-            if current_epoch >= max_epoch or abs(de_rmse[-1]-np.mean(de_rmse))<=de_tol:
+            if current_epoch >= max_epoch or self.is_convergent():
                 print("Finish Training index {} at Epoch {}".format(self.index,current_epoch))
                 return
             else:
@@ -164,7 +174,7 @@ class MatrixModel(object):
     def write_log(self, epoch, accuracy, rmse):
         with open(self.train_log, 'a+') as f:
             if epoch==0:
-                head_str = "dataset index: 1\n\
+                head_str = "\
                     train datasize: {}\n\
                     validation datasize: {}\n\
                     training index: {}\n\
