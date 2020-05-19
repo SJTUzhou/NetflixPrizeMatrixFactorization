@@ -9,7 +9,7 @@ from const import *
 
 
 class MatrixModel(object):
-    def __init__(self, feature_num, lmbda, lrate, index):
+    def __init__(self, feature_num, lmbda, lrate, index, datasetIndex=None):
         """
         Initialize the matrix model and get all the needed variables and constants for training and validation
 
@@ -42,14 +42,15 @@ class MatrixModel(object):
         self.lmbda = lmbda
         self.lrate = lrate
         self.index = index
+        self.datasetIndex = datasetIndex
 
         # Matrices for rating prediction
         self.userFeature = (2*np.random.rand(self.feature_num, USER_NUM)-1)
         self.movieFeature = (2*np.random.rand(self.feature_num, MOVIE_NUM)-1)
 
         # Datasets formed in numpy ndarray
-        self.train_ratings = np.load(TEMP_TR_ARRAY)
-        self.validation_ratings = np.load(TEMP_VAL_ARRAY)
+        self.train_ratings = self.load_temp_file(TEMP_TR_ARRAY)
+        self.validation_ratings = self.load_temp_file(TEMP_VAL_ARRAY)
 
         # Auxiliary variables for training and validation
         self.userIds = np.load(NPY_USER_ID_FILE)
@@ -61,12 +62,18 @@ class MatrixModel(object):
         self.rating_sums = np.load(NPY_RATING_SUMS_FILE)
         self.movie_avg_ratings = self.rating_sums/self.rating_counts
         
-        cts = np.load(TEMP_TR_RAT_COUNTS)
+        cts = self.load_temp_file(TEMP_TR_RAT_COUNTS)
         self.train_rating_counts = np.reshape(cts, (cts.shape[0],))
         # print("Train data shape: {}".format(self.train_ratings.shape))
         # print("Validation data shape: {}".format(self.validation_ratings.shape))
         self.train_log = "../logs/train_log_{}.txt".format(self.index)
 
+    def load_temp_file(self, fileName):
+        if self.datasetIndex is not None:
+            fileIndexName = fileName.replace(".npy","_{}.npy".format(self.datasetIndex))
+            return np.load(fileIndexName)  
+        else:
+            return np.load(fileName)
 
     def predict_rating(self, movieIdx, userIdx):
         # prediction = movie average rating + user offset + the part of matrix factorization
@@ -106,7 +113,7 @@ class MatrixModel(object):
             de_tol = 2e-4
             de_rmse= [float(rmse_str) for rmse_str in re.findall(r'rmse (\d+\.?\d*)',content,flags=re.I)[-de_num:]]
         # training has converged, stop it
-        if abs(de_rmse[-1]-np.mean(de_rmse))<=de_tol:
+        if abs(de_rmse[-1]-np.mean(de_rmse))<=de_tol and len(de_rmse)>de_num:
             return True
         else:
             return False
@@ -174,6 +181,8 @@ class MatrixModel(object):
     def write_log(self, epoch, accuracy, rmse):
         with open(self.train_log, 'a+') as f:
             if epoch==0:
+                if self.datasetIndex is not None:
+                    f.write("dataset Index: {}\n".format(self.datasetIndex))
                 head_str = "\
                     train datasize: {}\n\
                     validation datasize: {}\n\

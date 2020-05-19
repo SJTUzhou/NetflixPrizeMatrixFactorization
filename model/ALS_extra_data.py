@@ -2,12 +2,18 @@ import numpy as np
 import time
 from const import *
 
-def sortSaveTrainArrayByUser():
+def sortSaveTrainArrayByUser(index=None):
     startTime = time.time()
-    trainArray = np.load(TEMP_TR_ARRAY)
+    if index is not None:
+        trainArray = np.load(TEMP_TR_ARRAY.replace(".npy","_{}.npy".format(index)))
+    else:
+        trainArray = np.load(TEMP_TR_ARRAY)
     userSortedTrainArray = trainArray[np.argsort(trainArray[:,1])]
     duration = time.time()-startTime
-    np.save(TEMP_TR_ARRAY_USER, userSortedTrainArray)
+    if index is not None:
+        np.save(TEMP_TR_ARRAY_USER.replace(".npy","_{}.npy".format(index)), userSortedTrainArray)
+    else:
+        np.save(TEMP_TR_ARRAY_USER, userSortedTrainArray)
     print("Take {:.2f}s to get the train array sorted by user Ids".format(duration))
     return userSortedTrainArray
 

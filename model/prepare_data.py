@@ -154,16 +154,21 @@ def divide_val_tr_data(m_u_ratings, userIds, rat_counts, split_ratio):
     return train_rating_counts, train_ratings, validate_ratings
 
 
-def prepare_tr_val_data():
+def prepare_tr_val_data(index=None):
     ''' Prepare the train dataset and the validation dataset'''
     print("Start preparing train and validation data")
     movie_user_ratings = np.load(NPY_RATING_FILE)
     userIds = np.load(NPY_USER_ID_FILE)
     rating_counts = np.load(NPY_RATING_COUNTS_FILE)
     tr_rat_counts, tr_ratings, val_ratings = divide_val_tr_data(movie_user_ratings, userIds, rating_counts, VAL_TR_SPLIT_RATIO)
-    np.save(TEMP_TR_ARRAY, tr_ratings)
-    np.save(TEMP_VAL_ARRAY, val_ratings)
-    np.save(TEMP_TR_RAT_COUNTS, tr_rat_counts)
+    if index is not None:
+        np.save(TEMP_TR_ARRAY.replace(".npy","_{}.npy".format(index)), tr_ratings)
+        np.save(TEMP_VAL_ARRAY.replace(".npy","_{}.npy".format(index)), val_ratings)
+        np.save(TEMP_TR_RAT_COUNTS.replace(".npy","_{}.npy".format(index)), tr_rat_counts)
+    else:
+        np.save(TEMP_TR_ARRAY, tr_ratings)
+        np.save(TEMP_VAL_ARRAY, val_ratings)
+        np.save(TEMP_TR_RAT_COUNTS, tr_rat_counts)
     print("Finish preparing train and validation data")
 
 

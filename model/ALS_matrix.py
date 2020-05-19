@@ -10,11 +10,11 @@ from const import *
 from matrix_stoc_grad_desc import MatrixModel
 
 class ALS_MatrixModel(MatrixModel):
-    def __init__(self,feature_num,lmbda,index):
-        MatrixModel.__init__(self,feature_num,lmbda,"None",index)
+    def __init__(self,feature_num,lmbda,index,datasetIndex=None):
+        MatrixModel.__init__(self,feature_num,lmbda,"None",index,datasetIndex)
         # use Alternating-least-square method
-        self.method = "alternating least square"
-        self.userSortedTrainRating = np.load(TEMP_TR_ARRAY_USER)
+        self.method = "alternating least squares"
+        self.userSortedTrainRating = self.load_temp_file(TEMP_TR_ARRAY_USER)
         self.userSortedCounts = ALS_extra_data.getUserRatingCounts(self.userSortedTrainRating)
 
     # use Alternating-Least-Square to train 2 matrices
@@ -59,24 +59,6 @@ class ALS_MatrixModel(MatrixModel):
             self.movieFeature[:,movieIdx] = np.clip(x,-1.0,1.0)
             if movieIdx%5000 == 0:           
                 print("Training index {}: Finish the ratings of movie {}".format(self.index,movieIdx))
-
-    def write_log(self, epoch, accuracy, rmse):
-        with open(self.train_log, 'a+') as f:
-            if epoch==0:
-                head_str = "\
-                    train datasize: {}\n\
-                    validation datasize: {}\n\
-                    training index: {}\n\
-                    method: {}\n\
-                    feature_num: {}\n\
-                    lrate: None\n\
-                    lmbda: {}\n".format(self.train_ratings.shape[0],self.validation_ratings.shape[0],self.index,\
-                        self.method,self.feature_num,self.lmbda)
-                f.write(head_str)
-            eval_str = "Training index {}: Finish testing Epoch {}, validation accuracy {:.4} with rmse {:.4}\n"\
-                .format(self.index, epoch, accuracy, rmse)
-            print(eval_str)
-            f.write(eval_str)
 
 
 def single_run(arg_dict):

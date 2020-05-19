@@ -12,30 +12,52 @@ from prepare_data import divide_val_tr_data, prepare_tr_val_data
 from ALS_extra_data import sortSaveTrainArrayByUser
 
 
-def generate_temp_data():
+def generate_temp_data(index):
     start = time.time()
-    prepare_tr_val_data()
-    sortSaveTrainArrayByUser()
+    prepare_tr_val_data(index)
+    sortSaveTrainArrayByUser(index)
     duration = time.time() - start
     print("Take {:.2f}s to generate temporary data".format(duration))
 
 
-def running(ALS_index,SGD_index):       
+def runningALS(indexDict):
+    # parallel on CPUs by default
+    ALS_index = indexDict['ALS']
+    datasetIndex = indexDict['DATASET']        
     FEANUM = 50
     LMBDA = 0.03
     MAX_EPOCH = 20
-    ALS_model = ALS_MatrixModel(feature_num=FEANUM, lmbda=LMBDA, index=ALS_index)
-    p1 = mlp.Process(target=ALS_model.continue_training, args=(MAX_EPOCH,))
-    SGD_model = MatrixModel(feature_num=FEANUM, lmbda=LMBDA, lrate=0.05, index=SGD_index)
-    p2 = mlp.Process(target=SGD_model.continue_training, args=(MAX_EPOCH,))
-    p1.start()
-    p2.start()
-    p1.join()
-    p2.join()
+    ALS_model = ALS_MatrixModel(feature_num=FEANUM, lmbda=LMBDA, index=ALS_index, datasetIndex=datasetIndex)
+    ALS_model.continue_training(MAX_EPOCH)
+    
+
+def runningSGD(indexDict):
+    SGD_index = indexDict['SGD']
+    datasetIndex = indexDict['DATASET'] 
+    FEANUM = 50
+    LMBDA = 0.03
+    MAX_EPOCH = 20
+    SGD_model = MatrixModel(feature_num=FEANUM, lmbda=LMBDA, lrate=0.05, index=SGD_index, datasetIndex=datasetIndex)
+    SGD_model.continue_training(MAX_EPOCH)
+
+
+def main(startIndex):
+    cpuCores = 8
+    datasetIndexList = [i for i in range(startIndex, startIndex+cpuCores)]
+    mlp.freeze_support()
+    with mlp.Pool(processes=cpuCores) as mPool:
+        mPool.map(generate_temp_data, datasetIndexList)
+    
+    ALS_index = [i+100 for i in datasetIndexList]
+    SGD_index = [i+200 for i in datasetIndexList]
+
+    for ALS_i,dataset in zip(ALS_index,datasetIndexList):
+        runningALS({'ALS':ALS_i,'DATASET':dataset})
+    
+    argDictList = [{'SGD':SGD_i,'DATASET':dataset} for SGD_i,dataset in zip(SGD_index,datasetIndexList)]
+    with mlp.Pool(processes=cpuCores) as mPool:
+        mPool.map(runningSGD, argDictList)
 
 if __name__ == "__main__":
-    generate_temp_data()
-    ALS_index = [i for i in range(100,200)]
-    SGD_index = [i for i in range(200,300)]
-    for ALS_i, SGD_i in zip(ALS_index,SGD_index):
-        running(ALS_i,SGD_i)
+    startIndex = 0 # startIndex = N * CPU_NUM, with N an integer >= 0
+    main(startIndex)
