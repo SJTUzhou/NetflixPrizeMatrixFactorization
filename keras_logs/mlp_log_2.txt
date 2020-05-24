@@ -1,0 +1,16 @@
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 64)                6464      
+_________________________________________________________________
+dropout (Dropout)            (None, 64)                0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 65        
+=================================================================
+Total params: 6,529
+Trainable params: 6,529
+Non-trainable params: 0
+_________________________________________________________________
+Finish training keras model, test accuracy 0.4139, test RMSE loss 0.9936
+Input dim = 100 (concatenate userFeature & movieFeature)

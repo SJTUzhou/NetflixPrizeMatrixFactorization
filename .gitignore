@@ -13,8 +13,6 @@ myData
 netflix-prize-data
 tempData
 ckpt
-keras_logs
-keras_mlp_*.py
 
 # Distribution / packaging
 .vscode/
