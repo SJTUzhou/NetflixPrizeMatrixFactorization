@@ -18,3 +18,5 @@ Use multi-processing in python by default
 
 **ALS_matrix.py**: Run it to train and evaluate the matrices by alternating least squares
 
+All files and directories related to keras is a test version.
+
