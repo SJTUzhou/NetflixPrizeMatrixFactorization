@@ -1,7 +1,7 @@
 # store the constant variables
 
 # Given files
-TRAIN_FILES = ['../netflix-prize-data/combined_data_{}.txt'.format(i) for i in range(1,5)]
+TRAIN_FILES = ['../netflix-prize-data/combined_data_{}.txt'.format(i) for i in range(1, 5)]
 MOVIE_TITLE_FILE = '../netflix-prize-data/movie_titles.csv'
 PROBE_FILE = '../netflix-prize-data/probe.txt'
 QUALIFYING_FILE = '../netflix-prize-data/qualifying.txt'
@@ -11,9 +11,9 @@ MOVIE_NUM = 17770
 USER_NUM = 480189
 VAL_TR_SPLIT_RATIO = 0.03
 
-# stored temporary checkpoints and traing arrays
+# stored temporary checkpoints and training arrays
 USER_FEATURE_FILE = '../ckpt/user_feature_epoch_index.npy'
-MOVIE_FEATURE_FILE  = '../ckpt/movie_feature_epoch_index.npy'
+MOVIE_FEATURE_FILE = '../ckpt/movie_feature_epoch_index.npy'
 TEMP_TR_ARRAY = '../tempData/temp_train_array.npy'
 TEMP_VAL_ARRAY = '../tempData/temp_validate_array.npy'
 TEMP_TR_RAT_COUNTS = '../tempData/temp_tr_rat_counts.npy'
