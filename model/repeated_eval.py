@@ -42,10 +42,10 @@ def runningSGD(indexDict):
 
 
 def main(startIndex):
-    cpuCores = 8
-    datasetIndexList = [i for i in range(startIndex, startIndex+cpuCores)]
+    times = 8
+    datasetIndexList = [i for i in range(startIndex, startIndex+times)]
     mlp.freeze_support()
-    with mlp.Pool(processes=cpuCores) as mPool:
+    with mlp.Pool(processes=8) as mPool:
         mPool.map(generate_temp_data, datasetIndexList)
     
     ALS_index = [i+100 for i in datasetIndexList]
@@ -55,8 +55,8 @@ def main(startIndex):
         runningALS({'ALS':ALS_i,'DATASET':dataset})
     
     argDictList = [{'SGD':SGD_i,'DATASET':dataset} for SGD_i,dataset in zip(SGD_index,datasetIndexList)]
-    with mlp.Pool(processes=cpuCores) as mPool:
-        mPool.map(runningSGD, argDictList)
+    for argDict in argDictList:
+        runningSGD(argDict)
 
 if __name__ == "__main__":
     startIndex = 0 # startIndex = N * CPU_NUM, with N an integer >= 0
