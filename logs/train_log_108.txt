@@ -1,0 +1,29 @@
+dataset Index: 8
+                    train datasize: 97474887
+                    validation datasize: 3005620
+                    training index: 108
+                    method: alternating least squares
+                    feature_num: 50
+                    lrate: None
+                    lmbda: 0.03
+Training index 108: Finish testing Epoch 0, validation accuracy 0.2276 with rmse 1.789
+Training index 108: Finish testing Epoch 1, validation accuracy 0.431 with rmse 0.9689
+Training index 108: Finish testing Epoch 2, validation accuracy 0.4648 with rmse 0.9229
+Training index 108: Finish testing Epoch 3, validation accuracy 0.4789 with rmse 0.8978
+Training index 108: Finish testing Epoch 4, validation accuracy 0.4856 with rmse 0.8856
+Training index 108: Finish testing Epoch 5, validation accuracy 0.4888 with rmse 0.88
+Training index 108: Finish testing Epoch 6, validation accuracy 0.4906 with rmse 0.8774
+Training index 108: Finish testing Epoch 7, validation accuracy 0.4917 with rmse 0.8755
+Training index 108: Finish testing Epoch 8, validation accuracy 0.4925 with rmse 0.8743
+Training index 108: Finish testing Epoch 9, validation accuracy 0.493 with rmse 0.8734
+Training index 108: Finish testing Epoch 10, validation accuracy 0.4935 with rmse 0.8728
+Training index 108: Finish testing Epoch 11, validation accuracy 0.4939 with rmse 0.8722
+Training index 108: Finish testing Epoch 12, validation accuracy 0.4942 with rmse 0.8719
+Training index 108: Finish testing Epoch 13, validation accuracy 0.4944 with rmse 0.8716
+Training index 108: Finish testing Epoch 14, validation accuracy 0.4945 with rmse 0.8714
+Training index 108: Finish testing Epoch 15, validation accuracy 0.4947 with rmse 0.8711
+Training index 108: Finish testing Epoch 16, validation accuracy 0.4947 with rmse 0.871
+Training index 108: Finish testing Epoch 17, validation accuracy 0.4949 with rmse 0.8709
+Training index 108: Finish testing Epoch 18, validation accuracy 0.495 with rmse 0.8707
+Training index 108: Finish testing Epoch 19, validation accuracy 0.495 with rmse 0.8707
+Training index 108: Finish testing Epoch 20, validation accuracy 0.4951 with rmse 0.8705

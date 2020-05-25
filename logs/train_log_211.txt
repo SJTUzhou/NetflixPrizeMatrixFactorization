@@ -1,0 +1,29 @@
+dataset index: 11
+                    train datasize: 97474887
+                    validation datasize: 3005620
+                    training index: 211
+                    method: stochastic gradient descent
+                    feature_num: 50
+                    lrate: 0.05
+                    lmbda: 0.03
+Training index 211: Finish testing Epoch 0, validation accuracy 0.2290 with rmse 1.7903
+Training index 211: Finish testing Epoch 1, validation accuracy 0.4208 with rmse 1.0001
+Training index 211: Finish testing Epoch 2, validation accuracy 0.4479 with rmse 0.9508
+Training index 211: Finish testing Epoch 3, validation accuracy 0.4579 with rmse 0.9287
+Training index 211: Finish testing Epoch 4, validation accuracy 0.4654 with rmse 0.91590
+Training index 211: Finish testing Epoch 5, validation accuracy 0.4693 with rmse 0.9078
+Training index 211: Finish testing Epoch 6, validation accuracy 0.4728 with rmse 0.9029
+Training index 211: Finish testing Epoch 7, validation accuracy 0.4728 with rmse 0.9002
+Training index 211: Finish testing Epoch 8, validation accuracy 0.4749 with rmse 0.8983
+Training index 211: Finish testing Epoch 9, validation accuracy 0.4750 with rmse 0.8968
+Training index 211: Finish testing Epoch 10, validation accuracy 0.4772 with rmse 0.8956
+Training index 211: Finish testing Epoch 11, validation accuracy 0.4769 with rmse 0.8943
+Training index 211: Finish testing Epoch 12, validation accuracy 0.4786 with rmse 0.89420
+Training index 211: Finish testing Epoch 13, validation accuracy 0.4798 with rmse 0.8940
+Training index 211: Finish testing Epoch 14, validation accuracy 0.4796 with rmse 0.8945
+Training index 211: Finish testing Epoch 15, validation accuracy 0.4780 with rmse 0.8933
+Training index 211: Finish testing Epoch 16, validation accuracy 0.4796 with rmse 0.8938
+Training index 211: Finish testing Epoch 17, validation accuracy 0.4797 with rmse 0.8928
+Training index 211: Finish testing Epoch 18, validation accuracy 0.4802 with rmse 0.8929
+Training index 211: Finish testing Epoch 19, validation accuracy 0.4811 with rmse 0.8937
+Training index 211: Finish testing Epoch 20, validation accuracy 0.4807 with rmse 0.8931

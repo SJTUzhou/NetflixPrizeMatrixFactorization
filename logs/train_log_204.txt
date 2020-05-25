@@ -1,0 +1,29 @@
+dataset index: 4
+                    train datasize: 97474887
+                    validation datasize: 3005620
+                    training index: 204
+                    method: stochastic gradient descent
+                    feature_num: 50
+                    lrate: 0.05
+                    lmbda: 0.03
+Training index 204: Finish testing Epoch 0, validation accuracy 0.2272 with rmse 1.7898
+Training index 204: Finish testing Epoch 1, validation accuracy 0.4230 with rmse 1.0002
+Training index 204: Finish testing Epoch 2, validation accuracy 0.4468 with rmse 0.9505
+Training index 204: Finish testing Epoch 3, validation accuracy 0.4568 with rmse 0.9284
+Training index 204: Finish testing Epoch 4, validation accuracy 0.4647 with rmse 0.9158
+Training index 204: Finish testing Epoch 5, validation accuracy 0.4693 with rmse 0.9077
+Training index 204: Finish testing Epoch 6, validation accuracy 0.4709 with rmse 0.9025
+Training index 204: Finish testing Epoch 7, validation accuracy 0.4748 with rmse 0.9007
+Training index 204: Finish testing Epoch 8, validation accuracy 0.4743 with rmse 0.8982
+Training index 204: Finish testing Epoch 9, validation accuracy 0.4760 with rmse 0.8972
+Training index 204: Finish testing Epoch 10, validation accuracy 0.4765 with rmse 0.8954
+Training index 204: Finish testing Epoch 11, validation accuracy 0.4791 with rmse 0.89500
+Training index 204: Finish testing Epoch 12, validation accuracy 0.4768 with rmse 0.89380
+Training index 204: Finish testing Epoch 13, validation accuracy 0.4795 with rmse 0.8935
+Training index 204: Finish testing Epoch 14, validation accuracy 0.4792 with rmse 0.8944
+Training index 204: Finish testing Epoch 15, validation accuracy 0.4815 with rmse 0.8942
+Training index 204: Finish testing Epoch 16, validation accuracy 0.4795 with rmse 0.8937
+Training index 204: Finish testing Epoch 17, validation accuracy 0.4793 with rmse 0.8924
+Training index 204: Finish testing Epoch 18, validation accuracy 0.4815 with rmse 0.8932
+Training index 204: Finish testing Epoch 19, validation accuracy 0.4788 with rmse 0.8931
+Training index 204: Finish testing Epoch 20, validation accuracy 0.4802 with rmse 0.8930
